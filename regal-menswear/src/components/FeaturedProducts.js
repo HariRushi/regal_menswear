@@ -57,13 +57,13 @@ background-color: #91bfc1;
 
 const FeaturedProducts = forwardRef((props, ref) => {
   const navigate = useNavigate();
-  const products = useContext(ProductsContext); // Use the context
-  console.log(products);
+  const { newArrivals }= useContext(ProductsContext); // Use the context
+  console.log(newArrivals);
 
   return (
     <Wrap>
     <ProductsSection ref={ref}>
-      {products.map(product => (
+      {newArrivals.map(product => (
         <Product key={product.id} image={product.image} onClick={() => navigate(`/product/${product.id}`)}>
           {/* Display product details here */}
         </Product>

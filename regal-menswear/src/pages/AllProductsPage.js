@@ -127,7 +127,7 @@ const PageButton = styled.button`
 `;
 
 const AllProductsPage = () => {
-    const products = useContext(ProductsContext);
+    const { products } = useContext(ProductsContext);
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;

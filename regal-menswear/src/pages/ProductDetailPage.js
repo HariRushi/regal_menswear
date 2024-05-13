@@ -34,7 +34,7 @@ const DetailsSection = styled.div`
 
 const ProductDetailPage = () => {
   const { productId } = useParams();
-  const products = useContext(ProductsContext); // Use the context
+  const { products } = useContext(ProductsContext); // Use the context
   const product = products.find(p => p.id.toString() === productId);
 
   return (
