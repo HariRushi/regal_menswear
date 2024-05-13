@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/images/logo.png';
+import { useNavigate } from 'react-router-dom';
 
 const Nav = styled.nav`
   display: flex;
@@ -53,10 +54,11 @@ const NavButton = styled.button`
 `;
 //<NavButton onClick={() => console.log('Home')}>Home</NavButton>
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <Nav>
       <Logo src={logo} alt="Regal Menswear Logo" />
-      <StoreName onClick={() => console.log('Home')}>Regal Menswear</StoreName>
+      <StoreName onClick={() => navigate('/')} >Regal Menswear</StoreName>
       <NavItems>
         
         <NavButton onClick={() => console.log('About')}>About</NavButton>

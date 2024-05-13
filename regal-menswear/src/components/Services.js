@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const ServicesSection = styled.section`
   text-align: center;
   padding: 2rem;
+  background-color: #91bfc1;
 `;
 
 const Service = styled.div`
