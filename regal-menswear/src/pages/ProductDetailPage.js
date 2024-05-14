@@ -44,6 +44,9 @@ const ProductDetailPage = () => {
       <DetailsSection>
         <h1>{product.name}</h1>
         <p>Description of {product.name}</p>
+        <p>Category: {product.category}</p>
+        <p>Color: {product.color}</p>
+        <p>Added Date: {product.date}</p>
         {/* Add more details as required */}
       </DetailsSection>
     </DetailWrapper>);
