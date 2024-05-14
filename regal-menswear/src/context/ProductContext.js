@@ -20,9 +20,9 @@ export const ProductsProvider = ({ children }) => {
         .then(response => setNewArrivals(response.data))
         .catch(error => console.error('Error fetching new arrivals:', error));
     };
-
     fetchProducts();
     fetchNewArrivals();
+    console.log(products);
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import ProductDetail from '../components/ProductDetail';
+//import ProductDetail from '../components/ProductDetail';
 import styled from 'styled-components';
 import { ProductsContext } from '../context/ProductContext'; // Import the context
 
@@ -12,6 +12,7 @@ const DetailWrapper = styled.div`
   background-color: #91bfc1; // Matching the background color
   border: 1px solid #ccc;
   border-radius: 15px; // Rounded corners like FeaturedProducts
+  margin-top: 80px;
 `;
 
 const ImageSection = styled.div`

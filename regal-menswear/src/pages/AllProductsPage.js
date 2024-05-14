@@ -3,12 +3,12 @@ import { ProductsContext } from '../context/ProductContext';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 82px;
-  background-color: #91bfc1;
-`;
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 82px;
+//   background-color: #91bfc1;
+// `;
 
 const SortAndFilterContainer = styled.div`
   display: flex;
@@ -34,6 +34,7 @@ const TotalProducts = styled.div`
   font-size: 16px;
   color: #000;
 `;
+
 
 const FilterSection = styled.div`
   padding: 20px;
@@ -128,6 +129,7 @@ const PageButton = styled.button`
 
 const AllProductsPage = () => {
     const { products } = useContext(ProductsContext);
+    console.log(products);
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;

@@ -58,7 +58,6 @@ background-color: #91bfc1;
 const FeaturedProducts = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const { newArrivals }= useContext(ProductsContext); // Use the context
-  console.log(newArrivals);
 
   return (
     <Wrap>
