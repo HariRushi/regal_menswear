@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import styled from 'styled-components';
 import logo from '../assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
@@ -52,19 +52,23 @@ const NavButton = styled.button`
     text-decoration: underline;
   }
 `;
+
+
 //<NavButton onClick={() => console.log('Home')}>Home</NavButton>
-const Navbar = () => {
+const Navbar = ({aboutRef, meetTheRef, contactRef}) => {
   const navigate = useNavigate();
+  const handleScroll = () => {
+    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <Nav>
       <Logo src={logo} alt="Regal Menswear Logo" />
       <StoreName onClick={() => navigate('/')} >Regal Menswear</StoreName>
       <NavItems>
-        
+        <NavButton onClick={() => console.log('Services')}>Services</NavButton>
         <NavButton onClick={() => console.log('About')}>About</NavButton>
-        <NavButton onClick={() => console.log('Contact')}>Contact</NavButton>
         <NavButton onClick={() => console.log('Meet the Team')}>Meet the Team</NavButton>
-        <NavButton onClick={() => console.log('FAQ')}>FAQ</NavButton>
+        <NavButton onClick={() => console.log('Contact')}>Contact</NavButton>
       </NavItems>
     </Nav>
   );
